@@ -8,7 +8,7 @@ document.getElementById('contactForm').addEventListener('submit', function(e) {
   }).then(response => {
     if (response.ok) {
       // Başarılıysa istediğin yere yönlendir:
-      window.location.href = "https://mustafacsg.com";
+      window.location.href = "https://mustafacsg.com/index";
     } else {
       alert('Form gönderimi başarısız oldu.');
     }

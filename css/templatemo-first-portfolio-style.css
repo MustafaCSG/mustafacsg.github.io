@@ -1015,12 +1015,10 @@ p1 {
 }
 
 .nav-social-icon-link:hover {
-  background: var(--secondary-color);
+  background: var(--primary-color);
   border-color: transparent;
   color: var(--white-color);
 }
-
-
 
 /*---------------------------------------
   RESPONSIVE STYLES               
@@ -1241,6 +1239,20 @@ p1 {
   .hero h2 {
     font-size: 30px;
  }
+
+ .nav-social-icon-link:hover {
+  background: var(--secondary-color);
+  border-color: transparent;
+  color: var(--white-color);
+}
+
+.custom-btn {
+  background: var(--secondary-color);
+}
+
+.custom-btn:hover {
+  background: var(--primary-color);
+}
 
  
 }

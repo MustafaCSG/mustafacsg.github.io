@@ -1175,6 +1175,21 @@ p1 {
     border-bottom: 1px solid var(--border-color);
     border-radius: var(--border-radius-small) var(--border-radius-small) 0 0;
   }
+
+.nav-social-icon-link:hover {
+  background: var(--secondary-color);
+  border-color: transparent;
+  color: var(--white-color);
+}
+
+.custom-btn {
+  background: var(--secondary-color);
+}
+
+.custom-btn:hover {
+  background: var(--primary-color);
+}
+	
 }
 
 @media screen and (max-width: 575px) {
@@ -1240,19 +1255,7 @@ p1 {
     font-size: 30px;
  }
 
- .nav-social-icon-link:hover {
-  background: var(--secondary-color);
-  border-color: transparent;
-  color: var(--white-color);
-}
-
-.custom-btn {
-  background: var(--secondary-color);
-}
-
-.custom-btn:hover {
-  background: var(--primary-color);
-}
+ 
 
  
 }

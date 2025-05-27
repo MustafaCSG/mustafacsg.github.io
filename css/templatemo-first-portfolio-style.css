@@ -150,6 +150,12 @@ strong {
   padding: 10px 30px;
 }
 
+p1 {
+  color: var(--p-color);
+  font-size: 16px;
+  font-weight: var(--font-weight-normal);
+}
+
 
 /*---------------------------------------
   AVATAR IMAGE               

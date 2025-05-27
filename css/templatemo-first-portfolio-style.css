@@ -463,6 +463,9 @@ strong {
 }
 
 
+
+
+
 /*---------------------------------------
   HERO              
 -----------------------------------------*/
@@ -1083,8 +1086,8 @@ strong {
   }
 
   .hero-text {
-    top: 0;
-    margin-bottom: 120px;
+    top: -80px;
+    margin-bottom: 10px;
   }
 
   .about-thumb {
@@ -1181,6 +1184,26 @@ strong {
 
   .hero-image {
     min-width: inherit;
+  }
+
+  .profile-thumb {
+        padding-left: var(--bs-gutter, 0rem)!important;
+  }
+
+  .copyright-text-wrap p,
+     .copyright-text {
+       font-size: 18px;
+  }
+
+  .hero h2 {
+    font-size: 30px;
+}
+
+}
+
+@media only screen and (max-width: 768px) {
+  html, body {
+    overflow-x: hidden;
   }
 }
 

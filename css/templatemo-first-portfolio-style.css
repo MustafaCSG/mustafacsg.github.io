@@ -28,7 +28,7 @@ https://templatemo.com/tm-578-first-portfolio
   --h4-font-size:                 32px;
   --h5-font-size:                 24px;
   --h6-font-size:                 22px;
-  --p-font-size:                  17px;
+  --p-font-size:                  18px;
   --menu-font-size:               12px;
   --copyright-font-size:          14px;
 
@@ -356,6 +356,8 @@ p1 {
 .navbar-brand {
   font-size: var(--h4-font-size);
   font-weight: var(--font-weight-bold);
+  display: flex;
+  align-items: center;
 }
 
 .navbar-brand,
@@ -1066,8 +1068,10 @@ p1 {
   }
 
   .navbar .custom-btn {
-    border-color: var(--secondary-color);
-    color: var(--secondary-color);
+    border-color: var(--dark-color);
+    color: var(--dark-color);
+    padding: 8px 10px!important;
+    
   }
 
   .navbar-toggler .navbar-toggler-icon,
@@ -1203,8 +1207,9 @@ p1 {
 
   .hero h2 {
     font-size: 30px;
-}
+ }
 
+ 
 }
 
 @media only screen and (max-width: 768px) {

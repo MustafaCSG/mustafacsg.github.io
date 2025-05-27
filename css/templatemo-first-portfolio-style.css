@@ -988,6 +988,39 @@ p1 {
   color: var(--white-color);
 }
 
+.nav-social-icon {
+  margin: 0;
+  padding: 0;
+}
+
+.nav-social-icon-item {
+  list-style: none;
+  display: inline-block;
+  vertical-align: top;
+}
+
+.nav-social-icon-link {
+  
+  border-radius: var(--border-radius-large);
+  font-size: 20px;
+  color: var(--dark-color);
+  display: inline-block;
+  vertical-align: top;
+  margin: 2px 2px 5px 2px;
+  width: 40px;
+  height: 40px;
+  line-height: 40px;
+  text-align: center;
+  position: relative;
+}
+
+.nav-social-icon-link:hover {
+  background: var(--secondary-color);
+  border-color: transparent;
+  color: var(--white-color);
+}
+
+
 
 /*---------------------------------------
   RESPONSIVE STYLES               

@@ -890,6 +890,97 @@ p1 {
   border-color: transparent;
 }
 
+/*---------------------------------------
+  EKLEDİĞİM SUBMİT BUTON              
+-----------------------------------------*/
+
+
+.submit-button p {
+  position: relative;
+  top: 0;
+  right: 0;
+  transition: 1s;
+  margin-right: 20px;
+  color: #fff;
+  font-family: 'DM Sans', sans-serif;
+  font-size: 20px;
+  font-weight: var(--font-weight-bold);
+}
+
+.submit-button {
+  position: relative;
+  width: 250px;
+  height: 75px;
+  border: 0;
+  outline: none;
+  background: var(--primary-color);
+  color: #fff;
+  font-size: 22px;
+  border-radius: 40px;
+  text-align: center;
+  box-shadow: 0 6px 20px -5px rgba(0, 0, 0, 0.4);
+  overflow: hidden;
+  cursor: pointer;
+}
+.submitchecked {
+  width: 75px;
+  height: 75px;
+  border-radius: 40px;
+  box-shadow: 0 0 12px -2px rgba(0, 0, 0, 0.2);
+  position: absolute;
+  top:0;
+  right: -40px;
+  opacity: 0;
+  background: var(--secondary-color);
+}
+.submitchecked svg {
+  width: 40px;
+  margin: 20px;
+}
+.submitchecked path {
+  stroke-width: 3;
+  stroke: #fff;
+  stroke-dasharray: 34;
+  stroke-dashoffset: 34;
+  stroke-linecap: round;
+}
+.submitactive {
+  background: var(--secondary-color);
+  transition: 1s;
+}
+.submitactive p {
+  transition: 1s;
+  margin-right: 100px;
+}
+.submitactive .submitchecked {
+  opacity: 1;
+  transition: 1s;
+  right: 0;
+}
+.submitactive .submitchecked path {
+  transition: 1s;
+  transition-delay: 1s;
+  stroke-dashoffset: 0;
+}
+
+.submit-button {
+  display: block;
+  margin: 20px auto 0 auto; /* ortalama */
+  padding: 12px 24px;
+  border: none;
+  background-color: #007bff;
+  color: white;
+  font-size: 16px;
+  border-radius: 8px;
+  transition: 0.3s ease;
+}
+
+.submit-button:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+
 
 /*---------------------------------------
   SITE FOOTER              
@@ -1019,6 +1110,7 @@ p1 {
   border-color: transparent;
   color: var(--white-color);
 }
+
 
 /*---------------------------------------
   RESPONSIVE STYLES               
@@ -1221,6 +1313,7 @@ p1 {
 .custom-btn:hover {
   background: var(--primary-color);
 }
+
 
 }
 

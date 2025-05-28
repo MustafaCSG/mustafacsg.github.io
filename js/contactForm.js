@@ -8,8 +8,10 @@ document.getElementById('contactForm').addEventListener('submit', function(e) {
   }).then(response => {
     if (response.ok) {
       // Başarılıysa istediğin yere yönlendir:
+      setTimeout(() => {
       window.location.reload();
-      window.location.href = "https://mustafacsg.com/#section_5";
+      this.reset();
+      }, 3000);
     } else {
       alert('Form gönderimi başarısız oldu.');
     }

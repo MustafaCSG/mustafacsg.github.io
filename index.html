@@ -90,15 +90,17 @@
                 </div>
                     <div class="navbar-brand ms-auto me-3">
                         <a class="custom-btn btn btn-tel" href="tel:+905538443858">
-                            <span class="tel-text">+90 553 844 3858</span>
-                            <span class="tel-icon"><i class="bi bi-telephone-fill"></i></span>
+                            <span class="tel-text fade-slide">+90 553 844 3858</span>
+                            <span class="tel-icon fade-slide show"><i class="bi bi-telephone-fill"></i></span>
+
                         </a>
                     </div>
                 
                 <div class="navbar-brand mx-auto mx-lg-0">
-                        <a href="downloads/Mustafa_Cosgun_CV.pdf" class="custom-btn btn" download>
+                        <a href="downloads/Mustafa_Cosgun_CV.pdf" class="custom-btn btn fade-slide show" download>
                             <i class="bi bi-cloud-download me-2"></i> CV
                         </a>
+
                     </div>
 
             </div>
@@ -167,7 +169,7 @@
 
                                 <h3 class="pt-2 mb-3">ben Mustafa;</h3>
                                 <p>Cumhuriyet Üniversitesi Bilgisayar Mühendisliği bölümü öğrencisiyim. Kayseride ikamet etmekteyim kodlama ve tasarım üzerinde çalışmaktayım.</p>
-                                <p> HTML, CSS, JAVASCRIPT, PYTHON, JAVA ve birçok kodlama dilinde kendimi geliştrmeyi amaçladım. Teknolojiye olan yoğun ilgimle birlikte küçüklüğümden beri bilgisayar ile birlikte büyüdüm. Daha fazla bilgi için; <a href="#section_5">benimle iletişime geç.</a></p>
+                                <p> HTML, CSS, JAVASCRIPT, PYTHON, JAVA ve birçok kodlama dilinde kendimi geliştrmeyi amaçladım. Teknolojiye olan yoğun ilgimle birlikte küçüklüğümden beri bilgisayar ile birlikte büyüdüm. Daha fazla bilgi için; <a href="#section_5" style="font-weight: bold;">benimle iletişime geçebilirsin.</a></p>
                                 
                             </div>
                         </div>
@@ -362,23 +364,23 @@
                                     <strong class="site-footer-title d-block mb-3">Beceriler</strong>
 
                                     <ul class="footer-menu">
-                                        <li class="footer-menu-item"><a href="#section_5" class="footer-menu-link">HTML5</a></li>
+                                        <li class="footer-menu-item"><a class="footer-menu-link">HTML5</a></li>
 
-                                        <li class="footer-menu-item"><a href="#section_5" class="footer-menu-link">CSS</a></li>
+                                        <li class="footer-menu-item"><a class="footer-menu-link">CSS</a></li>
 
-                                        <li class="footer-menu-item"><a href="#section_5" class="footer-menu-link">JAVASCRIPT</a></li>
+                                        <li class="footer-menu-item"><a class="footer-menu-link">JAVASCRIPT</a></li>
 
-                                        <li class="footer-menu-item"><a href="#section_5" class="footer-menu-link">PYTHON</a></li>
+                                        <li class="footer-menu-item"><a class="footer-menu-link">PYTHON</a></li>
 
-                                        <li class="footer-menu-item"><a href="#section_5" class="footer-menu-link">JAVA</a></li>
+                                        <li class="footer-menu-item"><a class="footer-menu-link">JAVA</a></li>
                                         
-                                        <li class="footer-menu-item"><a href="#section_5" class="footer-menu-link">SQL</a></li>
+                                        <li class="footer-menu-item"><a class="footer-menu-link">SQL</a></li>
 
-                                        <li class="footer-menu-item"><a href="#section_5" class="footer-menu-link">PHP</a></li>
+                                        <li class="footer-menu-item"><a class="footer-menu-link">PHP</a></li>
 
-                                        <li class="footer-menu-item"><a href="#section_5" class="footer-menu-link">Adobe Illustrator</a></li>
+                                        <li class="footer-menu-item"><a class="footer-menu-link">Adobe Illustrator</a></li>
 
-                                        <li class="footer-menu-item"><a href="#section_5" class="footer-menu-link">Adobe Photoshop</a></li>
+                                        <li class="footer-menu-item"><a class="footer-menu-link">Adobe Photoshop</a></li>
                                     </ul>
 
                                     <strong class="site-footer-title d-block mt-4 mb-3">Sosyal Medyam</strong>
@@ -459,13 +461,25 @@
                                         </div>
 
                                          
-                                        <div class="col-lg-3 col-12 ms-auto">
-                                            <button type="submit" class="form-control">Gönder</button>
+                                        <!-- Buton bloğunu aşağıya ve ortalanacak şekilde ayarlıyoruz -->
+                                        <div class="col-lg-12 col-12">
+                                            <button type="submit" id="submit-btn" class="submit-button" disabled>
+                                                <p id="submit-btnText">Gönder</p>
+                                                <div class="submitchecked">
+                                                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 50 50">
+                                                        <path fill="transparent" d="M14.1 27.2l7.1 7.2 16.7-16.8"></path>
+                                                    </svg>
+                                                </div>
+                                            </button>
                                         </div>
+
+                                        
 
                                     </div>
                                 </form>
                             </div>
+
+                                
 
                         </div>
                     </div>
@@ -502,6 +516,8 @@
         <script src="js/custom.js"></script>
         <script src="js/contactForm.js"></script>
         <script src="js/search.js"></script>
+        <script src="js/phone.js"></script>
+        <script src="js/submitButton.js"></script>
 
     </body>
 </html>

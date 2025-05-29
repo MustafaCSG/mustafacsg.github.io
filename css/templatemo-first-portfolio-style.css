@@ -886,7 +886,6 @@ p1 {
 
 .custom-form button[type="submit"]:hover,
 .custom-form button[type="submit"]:focus {
-  background: var(--primary-color);
   border-color: transparent;
 }
 

@@ -11,7 +11,7 @@ document.getElementById('contactForm').addEventListener('submit', function(e) {
       setTimeout(() => {
       window.location.reload();
       this.reset();
-      }, 3000);
+      }, 5000);
     } else {
       alert('Form gönderimi başarısız oldu.');
     }

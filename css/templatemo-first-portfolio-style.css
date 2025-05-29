@@ -135,8 +135,8 @@ a:hover {
 }
 
 .section-padding {
-  padding-top: 120px;
-  padding-bottom: 120px;
+  padding-top: 30px;
+  padding-bottom: 30px;
 }
 
 b,
@@ -886,6 +886,7 @@ p1 {
 
 .custom-form button[type="submit"]:hover,
 .custom-form button[type="submit"]:focus {
+  background: var(--primary-color);
   border-color: transparent;
 }
 
@@ -946,6 +947,10 @@ p1 {
 .submitactive {
   background: var(--secondary-color);
   transition: 1s;
+}
+.submitactive:hover,
+.submitactive:focus {
+  background: var(--secondary-color)!important;
 }
 .submitactive p {
   transition: 1s;
@@ -1190,9 +1195,10 @@ p1 {
   }
 
   .section-padding {
-    padding-top: 80px;
-    padding-bottom: 80px;
+    padding-top: 30px;
+    padding-bottom: 30px;
   }
+
 
   .custom-btn,
   .navbar .custom-btn {
@@ -1246,7 +1252,7 @@ p1 {
 
   .hero {
     padding-top: 200px;
-    padding-bottom: 400px;
+    padding-bottom: 300px;
   }
 
   .hero-text {
@@ -1300,7 +1306,7 @@ p1 {
   }
 
    .nav-social-icon-link:hover {
-  background: var(--secondary-color);
+  background: var(--primary-color);
   border-color: transparent;
   color: var(--white-color);
 }

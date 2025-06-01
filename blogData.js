@@ -33,6 +33,9 @@ export const blogPosts = [
     `,
     tags: [
       '<span class="badge bg-info">CSS</span>'
+    ],
+     comments: [
+      { name: "", text: "", date: "" }
     ]
   },
    {
@@ -56,9 +59,8 @@ export const blogPosts = [
       '<span class="badge bg-primary me-1">Yazılım</span>',
       '<span class="badge bg-success">React</span>'
     ],
-    comments: [
-      { name: "Ahmet", text: "Çok güzel olmuş!", date: "11 Mayıs 2024" },
-      { name: "Zeynep", text: "Tebrik ederim.", date: "12 Mayıs 2024" }
+     comments: [
+      { name: "", text: "", date: "" }
     ]
   },
 
@@ -83,9 +85,8 @@ export const blogPosts = [
       '<span class="badge bg-primary me-1">Yazılım</span>',
       '<span class="badge bg-success">React</span>'
     ],
-    comments: [
-      { name: "Ahmet", text: "Çok güzel olmuş!", date: "11 Mayıs 2024" },
-      { name: "Zeynep", text: "Tebrik ederim.", date: "12 Mayıs 2024" }
+     comments: [
+      { name: "", text: "", date: "" }
     ]
   }
 

@@ -1,7 +1,7 @@
 export const blogPosts = [
   {
     slug: "yeni-sitem",
-    title: "Yeni Sitem 🎉 ",
+    title: "Yeni Sitem Yayında🎉 ",
     date: "01 Haziran 2024",
     image: "images/projects/imza-02-01.jpg", 
    content: `
@@ -10,7 +10,7 @@ export const blogPosts = [
       <p>Artık içeriklerime daha kolay ulaşabilir, beni daha yakından takip edebilirsiniz.
 Her kesimden ziyaretçiye açık, sade ama dopdolu bir platform sizleri bekliyor!</p>
     <p><strong>Bu yeni yolculukta sizlerin desteği benim için çok kıymetli.</strong>
-Siteni ziyaret etmeniz, yorumlarınız ve paylaşımlarınızla bana destek olmanız beni fazlasıyla mutlu eder. 🙏</p>
+Sitemi ziyaret etmeniz, yorumlarınız ve paylaşımlarınızla bana destek olmanız beni fazlasıyla mutlu eder. 🙏</p>
 `,
     tags: [
       '<span class="badge bg-success">Duyuru🎉</span>'

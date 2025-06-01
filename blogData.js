@@ -36,62 +36,12 @@ Dinamik blog sistemi geliştirmek başlangıçta karmaşık görünebilir ama sa
     title: "Deneme Yazısı 01",
     date: "1 Mayıs 2024",
     content: `
-      <p>CSS Grid ile düzen kurmak çok kolaylaştı.</p>
-      <p>Özellikle responsive tasarımlarda büyük avantaj sağladı.</p>
+      <p>Bu Bir Deneme Yazısıdır.</p>
+      <p>DENEME, <strong>deneme</strong></p>
+      <h6>Deneme</h6>
     `,
     tags: [
-      '<span class="badge bg-info">CSS</span>'
-    ],
-     comments: [
-      { name: "", text: "", date: "" }
-    ]
-  },
-   {
-    slug: "deneme-yazisi-02",
-    title: "Deneme Yazısı 02",
-    date: "20 Mayıs 2024",
-    image: "images/projects/grafiktasarim-01.jpg",
-    content: `
-      <p>Projemi geliştirirken birçok zorlukla karşılaştım.</p>
-      <p>React.js ve Node.js ile çözüm ürettim.
-      dfabkkşadfkbdaf
-      afdkmbdafmbşdaf
-      fdabmlakdfmblmdaflbmdaf
-      fdakmbkdafmb
-      dfakbmlkmdafbmdfşlabm
-      öyle ettim böyle ettim</p>
-      <h4>Özellikler</h4>
-      <p>Projemde şu özellikleri kullandım:</p>
-    `,
-    tags: [
-      '<span class="badge bg-primary me-1">Yazılım</span>',
-      '<span class="badge bg-success">React</span>'
-    ],
-     comments: [
-      { name: "", text: "", date: "" }
-    ]
-  },
-
-  {
-    slug: "deneme-yazisi-03",
-    title: "Deneme Yazısı 03",
-    date: "28 Mayıs 2024",
-    image: "images/projects/grafiktasarim-01.jpg" , 
-    content: `
-      <p>Projemi geliştirirken birçok zorlukla karşılaştım.</p>
-      <p>React.js ve Node.js ile çözüm ürettim.
-      dfabkkşadfkbdaf
-      afdkmbdafmbşdaf
-      fdabmlakdfmblmdaflbmdaf
-      fdakmbkdafmb
-      dfakbmlkmdafbmdfşlabm
-      öyle ettim böyle ettim</p>
-      <h4>Özellikler</h4>
-      <p>Projemde şu özellikleri kullandım:</p>
-    `,
-    tags: [
-      '<span class="badge bg-primary me-1">Yazılım</span>',
-      '<span class="badge bg-success">React</span>'
+      '<span class="badge bg-info">Deneme</span>'
     ],
      comments: [
       { name: "", text: "", date: "" }

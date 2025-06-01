@@ -1,8 +1,8 @@
 export const blogPosts = [
   {
-    slug: "proje-yolculugu",
-    title: "Proje Yolculuğu",
-    date: "10 Mayıs 2024",
+    slug: "yeni-sitem",
+    title: "Yeni Sitem 🎉 ",
+    date: "01 Haziran 2024",
     image: "images/projects/grafiktasarim-01.jpg",
     content: `
       <p>Projemi geliştirirken birçok zorlukla karşılaştım.</p>

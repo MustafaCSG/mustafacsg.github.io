@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+  <meta charset="UTF-8" />
+  <title>Admin Panel Email Girişi</title>
+  <script src="https://www.gstatic.com/firebasejs/9.23.0/firebase-app-compat.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/9.23.0/firebase-auth-compat.js"></script>
+
+  <style>
+    body {
+  max-width: 700px;
+  margin: 40px auto;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  padding: 20px;
+  background: #f9f9f9;
+  color: #333;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+  border-radius: 10px;
+}
+
+input, textarea {
+  width: 100%;
+  margin-top: 10px;
+  padding: 12px 15px;
+  font-size: 1rem;
+  border: 1.5px solid #ccc;
+  border-radius: 6px;
+  transition: border-color 0.3s ease, box-shadow 0.3s ease;
+  box-sizing: border-box;
+}
+
+input:focus, textarea:focus {
+  border-color: #4a90e2;
+  box-shadow: 0 0 6px #4a90e2;
+  outline: none;
+  background: #fff;
+}
+
+button {
+  margin-top: 20px;
+  padding: 12px 25px;
+  font-size: 1.1rem;
+  color: #fff;
+  background-color: #4a90e2;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  box-shadow: 0 4px 8px rgba(74,144,226,0.4);
+}
+
+button:hover {
+  background-color: #357ABD;
+  box-shadow: 0 6px 12px rgba(53,122,189,0.6);
+}
+
+/* Responsive için */
+@media (max-width: 991px) {
+  body {
+    max-width: 100%;
+    height: 100%;
+    margin: 20px auto;
+    padding: 15px;
+  }
+
+  button {
+    width: 100%;
+    padding: 14px;
+    font-size: 1.2rem;
+  }
+}
+
+  </style>
+
+</head>
+<body>
+  <h2>Admin Paneli Post Ekleme</h2>
+
+  <div id="auth-section">
+    <input id="email" type="email" placeholder="Email" /><br /><br />
+    <input id="password" type="password" placeholder="Şifre" /><br /><br />
+    <button id="sign-in">Giriş Yap</button>
+    <button id="sign-out" style="display:none;">Çıkış Yap</button>
+  </div>
+
+  <div id="user-info" style="display:none;">
+    <p>Hoşgeldiniz, <span id="user-email"></span>!</p>
+    <div id="admin-panel">
+  <h2>Yeni Blog Yazısı Ekle</h2>
+
+  <input type="text" id="title" placeholder="Başlık" />
+  <input type="text" id="slug" placeholder="Slug (URL için kısa başlık)" />
+  <input type="text" id="image" placeholder="Görsel URL (opsiyonel)" />
+  <textarea id="content" placeholder="İçerik (HTML destekler)" rows="10"></textarea>
+  <input type="text" id="tags" placeholder='Etiketler (virgül ile ayır: React,Yazılım)' />
+
+  <button onclick="addPost()">Blogu Ekle</button>
+  <p id="message"></p>
+
+  <script type="module">
+    import { createClient } from 'https://cdn.jsdelivr.net/npm/@supabase/supabase-js/+esm'
+
+    const supabaseUrl = 'https://hhhpduzdzipzdqmtxuue.supabase.co'
+    const supabaseKey = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6ImhoaHBkdXpkemlwemRxbXR4dXVlIiwicm9sZSI6ImFub24iLCJpYXQiOjE3NDg3NjI2NjIsImV4cCI6MjA2NDMzODY2Mn0.FIt6sZ_PAIDeCjf1hH4uzOnN1Ix5-S4TR_AJHoQqxCk'
+    const supabase = createClient(supabaseUrl, supabaseKey)
+
+    async function addPost() {
+      const title = document.getElementById('title').value.trim();
+      const slug = document.getElementById('slug').value.trim();
+      const image = document.getElementById('image').value.trim();
+      const content = document.getElementById('content').value.trim();
+      const tagsRaw = document.getElementById('tags').value.trim();
+      const tags = tagsRaw ? tagsRaw.split(',').map(t => t.trim()) : [];
+
+    const message = document.getElementById('message');
+
+
+  if (!slug) {
+    message.textContent = "Slug değeri boş bırakılamaz!";
+    message.style.color = "red";
+    return; // işlemi durdur
+  }
+
+
+      const date = new Date().toISOString();
+
+      const { data, error } = await supabase
+        .from('blog_posts')
+        .insert([{
+          title,
+          slug,
+          image,
+          content,
+          tags,
+          date
+        }]);
+
+      if (error) {
+        message.textContent = "Bir hata oluştu: " + error.message;
+        message.style.color = "red";
+      } else {
+        message.textContent = "Blog başarıyla eklendi!";
+        message.style.color = "green";
+      }
+    }
+
+      // 👇 Fonksiyonu global scope'a taşı
+  window.addPost = addPost;
+
+  // Enter tuşu ile giriş yapılmasını sağla
+document.addEventListener("keydown", function (e) {
+  if (e.key === "Enter") {
+    addPost();
+  }
+});
+
+  </script>
+
+    </div>
+  </div>
+
+  <script>
+    const firebaseConfig = {
+      apiKey: "AIzaSyCv_Vly80RO3DrfVtLmC_QCCT3Cvym_vtY",
+      authDomain: "mustafacsg-58.firebaseapp.com",
+      projectId: "mustafacsg-58",
+      storageBucket: "mustafacsg-58.appspot.com",
+      messagingSenderId: "830782233995",
+      appId: "APP_ID"
+    };
+
+    firebase.initializeApp(firebaseConfig);
+    const auth = firebase.auth();
+
+    const emailInput = document.getElementById('email');
+    const passwordInput = document.getElementById('password');
+    const signInBtn = document.getElementById('sign-in');
+    const signOutBtn = document.getElementById('sign-out');
+    const userInfo = document.getElementById('user-info');
+    const authSection = document.getElementById('auth-section');
+    const userEmailSpan = document.getElementById('user-email');
+
+    signInBtn.addEventListener('click', () => {
+      const email = emailInput.value.trim();
+      const password = passwordInput.value.trim();
+
+      if (!email || !password) {
+        alert("Lütfen email ve şifre girin.");
+        return;
+      }
+
+      auth.signInWithEmailAndPassword(email, password)
+        .catch(err => alert("Giriş hatası: " + err.message));
+    });
+
+    signOutBtn.addEventListener('click', () => {
+      auth.signOut();
+    });
+
+    auth.onAuthStateChanged(user => {
+      if (user) {
+        authSection.style.display = 'none';
+        userInfo.style.display = 'block';
+        userEmailSpan.textContent = user.email;
+        signOutBtn.style.display = 'inline-block';
+      } else {
+        authSection.style.display = 'block';
+        userInfo.style.display = 'none';
+        signOutBtn.style.display = 'none';
+      }
+    });
+  </script>
+</body>
+</html>
